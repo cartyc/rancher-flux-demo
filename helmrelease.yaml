@@ -1,0 +1,23 @@
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: certmanager
+spec:
+  releaseName: certmanager
+  chart:
+    repository: https://kubernetes-charts.storage.googleapis.com
+    version: v0.5.2
+    name: cert-manager
+---
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: rancher
+  namespace: default
+spec:
+  chart:
+    repository: https://releases.rancher.com/server-charts/stable
+    version: 2.2.8
+    name: rancher
+  values:
+    hostname: rancher.my.org
