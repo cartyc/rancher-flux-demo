@@ -2,6 +2,7 @@ apiVersion: helm.fluxcd.io/v1
 kind: HelmRelease
 metadata:
   name: certmanager
+  namespace: rancher
 spec:
   releaseName: certmanager
   chart:
@@ -13,7 +14,7 @@ apiVersion: helm.fluxcd.io/v1
 kind: HelmRelease
 metadata:
   name: rancher
-  namespace: default
+  namespace: rancher
 spec:
   chart:
     repository: https://releases.rancher.com/server-charts/stable
