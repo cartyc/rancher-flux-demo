@@ -2,7 +2,7 @@ apiVersion: helm.fluxcd.io/v1
 kind: HelmRelease
 metadata:
   name: harbor
-  namespace: default
+  namespace: rancher
 spec:
   chart:
     repository: https://helm.goharbor.io
@@ -33,7 +33,7 @@ spec:
         notarySecretName: ""
         # The common name used to generate the certificate, it's necessary
         # when the type isn't "ingress" and "secretName" is null
-        commonName: ""
+        commonName: "harbor"
       ingress:
         hosts:
           core: core.harbor.domain
