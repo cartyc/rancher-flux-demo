@@ -6,8 +6,8 @@ metadata:
 spec:
   releaseName: certmanager
   chart:
-    repository: https://kubernetes-charts.storage.googleapis.com
-    version: v0.5.2
+    repository: https://charts.jetstack.io
+    version: v0.9.1
     name: cert-manager
 ---
 apiVersion: helm.fluxcd.io/v1
