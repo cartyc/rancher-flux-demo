@@ -18,7 +18,7 @@ metadata:
 spec:
   chart:
     repository: https://releases.rancher.com/server-charts/stable
-    version: 2.2.8
+    version: 2.3.0-rc7
     name: rancher
   values:
     hostname: rancher.my.org
