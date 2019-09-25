@@ -1,0 +1,12 @@
+namespace: flux-system
+resources:
+  - namespace.yaml
+  - release-crd.yaml
+  - operator-account.yaml
+  - operator-deployment.yaml
+secretGenerator:
+  - name: helm-repositories
+    files:
+      - repositories.yaml
+patchesStrategicMerge:
+  - patch.yaml
