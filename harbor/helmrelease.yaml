@@ -2,7 +2,7 @@ apiVersion: helm.fluxcd.io/v1
 kind: HelmRelease
 metadata:
   name: harbor
-  namespace: rancher
+  namespace: harbor
 spec:
   chart:
     repository: https://helm.goharbor.io
