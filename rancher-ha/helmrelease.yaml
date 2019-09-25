@@ -2,7 +2,7 @@ apiVersion: helm.fluxcd.io/v1
 kind: HelmRelease
 metadata:
   name: certmanager
-  namespace: rancher  
+  namespace: cert-manager  
 spec:
   releaseName: certmanager
   chart:
