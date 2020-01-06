@@ -56,10 +56,10 @@ spec:
       # ssh_config above, with an `IdentityFile` entry matching each
       # key in the secret mentioned here.
       #
-      # - name: git-key
-      #   secret:
-      #     secretName: flux-git-deploy
-      #     defaultMode: 0400 # when mounted read-only, we won't be able to chmod
+      - name: git-key
+        secret:
+          secretName: flux-git-deploy
+          defaultMode: 0400 # when mounted read-only, we won't be able to chmod
       #
       # These two volumes are for mounting a repositories.yaml file,
       # and providing a cache directory. The latter is needed because
@@ -100,15 +100,15 @@ spec:
         volumeMounts:
         # Include this if you need to mount a customised known_hosts or ssh_config
         # file; you'll also need the volume declared above.
-        # - name: sshdir
-        #   mountPath: /root/.ssh
-        #   readOnly: true
-        # - name: git-key
-        #   mountPath: /etc/fluxd/ssh
-        # - name: repositories-yaml
-        #   mountPath: /var/fluxd/helm/repository
-        # - name: repositories-cache
-        #   mountPath: /var/fluxd/helm/repository/cache
+        - name: sshdir
+          mountPath: /root/.ssh
+          readOnly: true
+        - name: git-key
+          mountPath: /etc/fluxd/ssh
+        - name: repositories-yaml
+          mountPath: /var/fluxd/helm/repository
+        - name: repositories-cache
+          mountPath: /var/fluxd/helm/repository/cache
         # - name: helm-tls-certs
         #   mountPath: /etc/fluxd/helm
         #   readOnly: true
