@@ -18,3 +18,6 @@ spec:
                mountPath: /var/fluxd/helm/repository
              - name: repositories-cache
                mountPath: /var/fluxd/helm/repository/cache
+          env:
+            - name: HELM_VERSION
+              value: v3

@@ -2,7 +2,7 @@ apiVersion: helm.fluxcd.io/v1
 kind: HelmRelease
 metadata:
   name: certmanager
-  namespace: cert-manager  
+  namespace: certmanager  
 spec:
   releaseName: certmanager
   chart:
@@ -18,7 +18,7 @@ metadata:
 spec:
   chart:
     repository: https://releases.rancher.com/server-charts/stable
-    version: v2.2.8
+    version: v2.3.3
     name: rancher
   values:
     hostname: rancher.my.org
