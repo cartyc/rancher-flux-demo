@@ -76,7 +76,7 @@ spec:
         # There are no ":latest" images for helm-operator. Find the most recent
         # release or image version at https://hub.docker.com/r/weaveworks/helm-operator/tags
         # and replace the tag here.
-        image: docker.io/fluxcd/helm-operator-prerelease:helm-v3-71bc9d62
+        image: docker.io/fluxcd/helm-operator:1.0.0-rc5
         imagePullPolicy: IfNotPresent
         ports:
         - name: http
@@ -115,9 +115,6 @@ spec:
         # - name: helm-tls-ca
         #   mountPath: /etc/fluxd/helm-ca
         #   readOnly: true
-        env:
-          - name: HELM_VERSION
-            value: v3
         args:
         # How to find Tiller
         - --tiller-namespace=kube-system

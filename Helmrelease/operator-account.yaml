@@ -7,7 +7,6 @@ metadata:
   labels:
     name: flux-helm-operator
   name: flux-helm-operator
-  namespace: flux-system  
 ---
 apiVersion: rbac.authorization.k8s.io/v1beta1
 kind: ClusterRole
@@ -35,4 +34,4 @@ roleRef:
 subjects:
   - kind: ServiceAccount
     name: flux-helm-operator
-    namespace: flux-system
+    namespace: default
