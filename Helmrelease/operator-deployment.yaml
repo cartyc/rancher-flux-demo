@@ -100,9 +100,9 @@ spec:
         volumeMounts:
         # Include this if you need to mount a customised known_hosts or ssh_config
         # file; you'll also need the volume declared above.
-        - name: sshdir
-          mountPath: /root/.ssh
-          readOnly: true
+        # - name: sshdir
+        #   mountPath: /root/.ssh
+        #   readOnly: true
         - name: git-key
           mountPath: /etc/fluxd/ssh
         - name: repositories-yaml
