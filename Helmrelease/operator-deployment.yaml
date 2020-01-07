@@ -43,10 +43,10 @@ spec:
       # using more than one GitHub repo. NB the entry key should be
       # "config" rather than "ssh_config" if mounted in ~/.ssh/.
       #
-      # - name: sshdir
-      #   configMap:
-      #     name: flux-ssh-config
-      #     defaultMode: 0400
+      - name: sshdir
+        configMap:
+          name: flux-ssh-config
+          defaultMode: 0400
       #
       # You will need this volume if you're using a git repo that
       # needs an SSH key for access; e.g., a GitHub deploy key. If
